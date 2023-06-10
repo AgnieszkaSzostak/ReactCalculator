@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./public/screenshot.png" alt="">
 
-## Available Scripts
+<!-- ### :arrow_forward: View live version: **[DEMO]()** -->
+## :cd: How to run a project:
 
-In the project directory, you can run:
+### Prerequisites:
+* npm 
 
-### `npm start`
+  ```sh
+  npm install npm@latest -g
+  ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+At first install all dependencies:
+```sh
+npm install
+```
 
-### `npm test`
+1. Clone the repo
+   ```sh
+   git clone 
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3.  Enter
+   ```sh
+   npm run start
+   ```
+ Project runs at port 3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here are the assumptions I have made:
+* The result is calculated according to the order of operations in mathematics, using the built-in eval() function in JavaScript. I understand that using this function is not the best solution, but for the purpose of this particular calculator, it works, especially when it comes to floating-point numbers.
+* The result appears after clicking the '=' sign and after that, further operations cannot be performed on the evaluation
+* The operations must be displayed on the calculator screen in real-time - due to this requirement, I decided to take approach using an array.
+* The entered number cannot exceed 10 characters.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The problems I encountered seem to have roots in limitations of the JavaScript language. Many times, it was necessary to manipulate data of type string. Regular expressions seemed to be helpful in some cases. I was unable to implement the functionality of entering negative numbers, yet!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+ 
+I have also tried to approach this in other ways:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Lines 99-105  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The result is calculated according to the order of operations, without using the eval() function, and appears in real-time regardless of clicking the '=' button. It does not work with '%' and floating-point numbers.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Lines 107-111
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The result is calculated based on the created evaluation function. It only works for two numbers and, similar to the previous solution, does not consider '%' and floating-point numbers.
+ 
+The task was quite challenging. I would try to implement it in a different language next time. As for the order of operations, one can consider using Reverse Polish Notation, but this solution seems very labor-intensive. In a commercial project, one can of course use a ready-made library like mathjs that performs the calculations, but I decided to try implementing the logic by myself as a part of the training.
 
-## Learn More
+Useful links
+https://color.adobe.com/create/image
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://blog.devgenius.io/create-a-percentage-calculator-with-react-and-javascript-a1be96451ca4
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://www.sitepoint.com/react-tutorial-build-calculator-app/
+https://codepen.io/Anastasiia_Dev/pen/KgrPWM
 
-### Code Splitting
+https://dev.to/subinedge/evaluate-reverse-polish-notation-expressions-using-javascript-algorithms-jmb
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Credits:
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/agnieszkaszostak/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

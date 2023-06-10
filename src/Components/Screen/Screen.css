@@ -1,0 +1,33 @@
+/* Screen */
+
+.screen{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  flex: 1;
+
+  background-color: #212121;
+  min-height: 140px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1rem 1.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-width: 368px;
+}
+
+.screen__calculation--order{
+  text-align: right;
+  font-size: 1.5rem;
+  color: #D98299;
+}
+
+
+.screen__calculation--evaluation{
+  font-weight: 300;
+  color: white;
+  font-size: 3rem;
+  text-align: right;
+}
