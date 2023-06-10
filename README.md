@@ -21,7 +21,7 @@ npm install
 
 1. Clone the repo
    ```sh
-   git clone 
+   git clone https://github.com/AgnieszkaSzostak/ReactCalculator.git
    ```
 2. Install NPM packages
    ```sh
